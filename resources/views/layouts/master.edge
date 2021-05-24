@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Abolition - {{ location }}</title>
+		<link href="https://unpkg.com/tailwindcss@^2.0/dist/base.min.css" rel="stylesheet" />
+		<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+	</head>
+	<body class="w-full h-full flex flex-col bg-gray-200">
+		<nav class="w-full h-16 flex justify-around items-center bg-gray-700">
+			<a class="text-white text-xl font-semibold uppercase" href="/">Abolition</a>
+			<ul class="flex justify-center items-center text-sm text-gray-200">
+				@if(auth.isLoggedIn)
+				<li class="mx-2 hover:text-white">
+					<a class="px-2" href="/logout">Déconnexion</a>
+				</li>
+				@else
+				<li class="mx-2 hover:text-white">
+					<a class="px-2" href="/signup">Créer un compte</a>
+				</li>
+				<li class="mx-2 hover:text-white">
+					<a class="px-2" href="/login">Se connecter</a>
+				</li>
+				@endif
+			</ul>
+		</nav>
+
+		@!section('body')
+	</body>
+</html>

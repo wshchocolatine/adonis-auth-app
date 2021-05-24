@@ -1,0 +1,12 @@
+@layout('layouts/master')
+@set('location', 'Home')
+
+@section('body')
+<div class="w-full h-full flex justify-center items-center">
+	@if(auth.isLoggedIn)
+	<h1>Bienvenue {{ auth.user.username }} 👋</h1>
+	@else
+	<h1>Tu dois te connecter ou bien te créer un compte.</h1>
+	@endif
+</div>
+@endsection

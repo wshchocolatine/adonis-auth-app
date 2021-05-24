@@ -1,0 +1,65 @@
+@layout('layouts/master')
+@set('location', 'Créer un compte')
+
+@section('body')
+<div class="w-full h-full flex justify-center items-center">
+	<form
+		class="my-10 w-5/12 px-7 py-5 flex flex-col rounded bg-white"
+		method="POST"
+		action="/signup"
+	>
+		<h2 class="mt-4 self-center font-semibold text-3xl text-gray-800">Créer un compte</h2>
+
+		<label class="mt-10 uppercase" for="lastname">Nom</label>
+		<input
+			class="mt-2 pl-2 py-3 border border-gray-200 outline-none rounded"
+			type="text"
+			name="lastname"
+			placeholder="Nom"
+			required
+		/>
+
+		<label class="mt-4 uppercase" for="firstname">Prénom</label>
+		<input
+			class="mt-2 pl-2 py-3 border border-gray-200 outline-none rounded"
+			type="text"
+			name="firstname"
+			placeholder="prénom"
+			required
+		/>
+
+		<label class="mt-4 uppercase" for="birth">Date de naissance</label>
+		<input
+			class="mt-2 pl-2 py-3 border border-gray-200 outline-none rounded placeholder-gray-200"
+			type="date"
+			name="birth"
+			required
+		/>
+
+		<label class="mt-4 uppercase" for="email">E-mail</label>
+		<input
+			class="mt-2 pl-2 py-3 border border-gray-200 outline-none rounded"
+			type="text"
+			name="email"
+			placeholder="adresse email"
+			required
+		/>
+
+		<label class="mt-4 uppercase" for="password">Mot de passe</label>
+		<input
+			class="mt-2 pl-2 py-3 border border-gray-200 outline-none rounded"
+			type="password"
+			name="password"
+			placeholder="mot de passe"
+			required
+		/>
+
+		<button
+			class="w-full py-3 mt-10 bg-gray-700 rounded text-white uppercase hover:bg-gray-800"
+			type="submit"
+		>
+			Créer
+		</button>
+	</form>
+</div>
+@endsection
